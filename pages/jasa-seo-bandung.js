@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head"; // Import Head from Next.js
+import Head from "next/head"; // Import Head dari Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
 import MainBanner from "../components/Bandung/MainBanner"; // Ganti Surabaya dengan Bandung
 import Features from "../components/Bandung/Features"; // Ganti Surabaya dengan Bandung
@@ -25,18 +25,18 @@ const Index = () => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5", // Nilai rating
-      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "ratingCount": "4172" // Jumlah rating
+      "ratingValue": 5, // Nilai rating (angka, bukan string)
+      "bestRating": 5,  // Nilai rating terbaik (misalnya 5)
+      "ratingCount": 3172 // Jumlah rating (angka, bukan string)
     },
     "offers": {
       "@type": "AggregateOffer",
       "name": "Layanan Jasa SEO Bandung",
       "priceCurrency": "IDR",
-      "lowPrice": "3399000", // Harga terendah
-      "highPrice": "10199000", // Harga tertinggi
-      "offerCount": "1000", // Jumlah tawaran yang tersedia
-      "url": "https://pasar.web.id/jasa-seo-bandung", // URL penawaran
+      "lowPrice": 3399000, // Harga terendah (angka, bukan string)
+      "highPrice": 10199000, // Harga tertinggi (angka, bukan string)
+      "offerCount": 1000, // Jumlah tawaran yang tersedia (angka, bukan string)
+      "url": "https://pasar.web.id/jasa-seo-bandung" // URL penawaran
     }
   };
 
@@ -61,9 +61,12 @@ const Index = () => {
         <link rel="canonical" href="https://pasar.web.id/jasa-seo-bandung" /> {/* Ganti Surabaya dengan Bandung */}
 
         {/* Schema.org untuk Aggregate Rating */}
-        <script type="application/ld+json">
-          {JSON.stringify(aggregateRatingSchema)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
+          }}
+        />
       </Head>
 
       <NavbarTwo />
