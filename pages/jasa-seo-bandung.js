@@ -16,39 +16,27 @@ import Footer from "../components/Layouts/Footer";
 const Index = () => {
   const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": "Product", // Mengganti Service dengan Product
     "name": "Jasa SEO Bandung", // Nama layanan
+    "description": "Layanan SEO terbaik di Bandung untuk meningkatkan peringkat website Anda di Google.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pasar.Web.id"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5", // Nilai rating
       "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "reviewCount": "112" // Jumlah review
+      "ratingCount": "4172" // Jumlah rating
     },
     "offers": {
-      "@type": "Offer",
-      "url": "https://pasar.web.id/jasa-seo-bandung", // URL penawaran
+      "@type": "AggregateOffer",
+      "name": "Layanan Jasa SEO Bandung",
       "priceCurrency": "IDR",
-      "price": "750000"
-    }
-  };
-
-  const pricingSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Jasa SEO Bandung", // Nama layanan
-    "offers": {
-      "@type": "Offer",
-      "url": "https://pasar.web.id/jasa-seo-bandung", // Ganti Surabaya dengan Bandung
-      "priceCurrency": "IDR", // Mata uang harga
-      "price": "750000", // Harga satuan
-      "priceValidUntil": "2025-12-31", // Tanggal sampai harga ini berlaku
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "priceCurrency": "IDR",
-        "price": "750000", // Harga untuk satu unit
-        "unitCode": "H87", // Ini adalah kode unit untuk layanan
-        "name": "Harga Layanan SEO" // Nama layanan untuk harga
-      }
+      "lowPrice": "3399000", // Harga terendah
+      "highPrice": "10199000", // Harga tertinggi
+      "offerCount": "1000", // Jumlah tawaran yang tersedia
+      "url": "https://pasar.web.id/jasa-seo-bandung", // URL penawaran
     }
   };
 
@@ -75,11 +63,6 @@ const Index = () => {
         {/* Schema.org untuk Aggregate Rating */}
         <script type="application/ld+json">
           {JSON.stringify(aggregateRatingSchema)}
-        </script>
-
-        {/* Schema.org untuk Pricing (Perbaikan) */}
-        <script type="application/ld+json">
-          {JSON.stringify(pricingSchema)}
         </script>
       </Head>
 
