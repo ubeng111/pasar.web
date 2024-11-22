@@ -22,6 +22,10 @@ const Index = () => {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "112"
+    },
+    "itemReviewed": {
+      "@type": "Service",
+      "name": "Jasa SEO Bandung" // Added itemReviewed to specify the service being reviewed
     }
   };
 
@@ -33,12 +37,7 @@ const Index = () => {
       "@type": "Offer",
       "url": "https://pasar.web.id/jasa-seo-bandung", // Changed Surabaya to Bandung
       "priceCurrency": "IDR",
-      "price": "750000",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "priceCurrency": "IDR",
-        "priceRange": "750000-33600000"
-      }
+      "price": "750000"
     }
   };
 
