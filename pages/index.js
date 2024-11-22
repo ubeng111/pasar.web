@@ -61,10 +61,13 @@ const Index = () => {
         <meta property="og:url" content="https://pasar.web.id" />
         <link rel="canonical" href="https://pasar.web.id" />
 
-        {/* Schema.org untuk Aggregate Rating */}
-        <script type="application/ld+json">
-          {JSON.stringify(aggregateRatingSchema)}
-        </script>
+        {/* Schema.org untuk Aggregate Rating menggunakan dangerouslySetInnerHTML */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
+          }}
+        />
       </Head>
 
       <NavbarTwo />
