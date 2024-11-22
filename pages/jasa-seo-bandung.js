@@ -22,10 +22,6 @@ const Index = () => {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "112"
-    },
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Jasa SEO Bandung" // Added itemReviewed to specify the service being reviewed
     }
   };
 
@@ -72,10 +68,6 @@ const Index = () => {
                 "@type": "AggregateRating",
                 "ratingValue": "5",
                 "reviewCount": "112"
-              },
-              "itemReviewed": {
-                "@type": "Service",
-                "name": "Jasa SEO Bandung"
               }
             }
           `}
@@ -118,4 +110,3 @@ const Index = () => {
 };
 
 export default Index;
-
