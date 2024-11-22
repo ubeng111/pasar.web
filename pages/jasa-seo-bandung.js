@@ -1,93 +1,88 @@
 import React from "react";
 import Head from "next/head"; // Import Head from Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
-import MainBanner from "../components/Bandung/MainBanner"; // Changed Surabaya to Bandung
-import Features from "../components/Bandung/Features"; // Changed Surabaya to Bandung
-import AboutContent from "../components/Bandung/AboutContent"; // Changed Surabaya to Bandung
-import ServicesCard from "../components/Bandung/ServicesCard"; // Changed Surabaya to Bandung
-import WhyChooseUs from "../components/Bandung/WhyChooseUs"; // Changed Surabaya to Bandung
+import MainBanner from "../components/Bandung/MainBanner"; // Ganti Surabaya dengan Bandung
+import Features from "../components/Bandung/Features"; // Ganti Surabaya dengan Bandung
+import AboutContent from "../components/Bandung/AboutContent"; // Ganti Surabaya dengan Bandung
+import ServicesCard from "../components/Bandung/ServicesCard"; // Ganti Surabaya dengan Bandung
+import WhyChooseUs from "../components/Bandung/WhyChooseUs"; // Ganti Surabaya dengan Bandung
 import Testimonials from "../components/Common/Testimonials";
-import AnalysisFormContent from "../components/Bandung/AnalysisFormContent"; // Changed Surabaya to Bandung
+import AnalysisFormContent from "../components/Bandung/AnalysisFormContent"; // Ganti Surabaya dengan Bandung
 import PartnerLogos from "../components/Common/PartnerLogos";
-import FaqSection from "../components/Bandung/FaqSection"; // Changed Surabaya to Bandung
+import FaqSection from "../components/Bandung/FaqSection"; // Ganti Surabaya dengan Bandung
 import PricingContent from "../components/PricingPlans/PricingContent";
 import Footer from "../components/Layouts/Footer";
 
 const Index = () => {
-  const aggregateRating = {
+  const reviewSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Jasa SEO Bandung", // Changed Surabaya to Bandung
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "112"
+    "@type": "Review",
+    "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": "5", // Nilai rating
+      "bestRating": "5",  // Nilai rating terbaik (misalnya 5 untuk bintang 5)
+      "worstRating": "1"  // Nilai rating terendah (misalnya 1 untuk bintang 1)
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Pelanggan Kami" // Nama pengulas, ini bisa disesuaikan
+    },
+    "datePublished": "2024-11-22", // Tanggal ulasan dipublikasikan
+    "itemReviewed": {
+      "@type": "Service",
+      "name": "Jasa SEO Bandung", // Nama layanan
+      "description": "Layanan SEO profesional di Bandung untuk membantu bisnis Anda menduduki peringkat tertinggi di Google."
     }
   };
 
-  const pricing = {
+  const pricingSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": "Jasa SEO Bandung", // Changed Surabaya to Bandung
+    "name": "Jasa SEO Bandung", // Nama layanan
     "offers": {
       "@type": "Offer",
-      "url": "https://pasar.web.id/jasa-seo-bandung", // Changed Surabaya to Bandung
-      "priceCurrency": "IDR",
-      "price": "750000"
+      "url": "https://pasar.web.id/jasa-seo-bandung", // Ganti Surabaya dengan Bandung
+      "priceCurrency": "IDR", // Mata uang harga
+      "price": "750000", // Harga satuan
+      "priceValidUntil": "2025-12-31", // Tanggal sampai harga ini berlaku
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "priceCurrency": "IDR",
+        "price": "750000", // Harga untuk satu unit
+        "unitCode": "H87", // Ini adalah kode unit untuk layanan
+        "name": "Harga Layanan SEO" // Nama layanan untuk harga
+      }
     }
   };
 
   return (
     <>
-      {/* Adding Title and Meta Description */}
+      {/* Menambahkan Title dan Meta Description */}
       <Head>
-        <title>Jasa SEO Bandung Profesional Murah Terbaik - Pasar.Web.id</title> {/* Changed Surabaya to Bandung */}
+        <title>Jasa SEO Bandung Profesional Murah Terbaik - Pasar.Web.id</title> {/* Ganti Surabaya dengan Bandung */}
         <meta
           name="description"
-          content="Jasa SEO Bandung dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda." // Changed Surabaya to Bandung
+          content="Jasa SEO Bandung dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda." // Ganti Surabaya dengan Bandung
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Jasa SEO Bandung - Tingkatkan Visibilitas Website Anda di Google" /> {/* Changed Surabaya to Bandung */}
+        <meta property="og:title" content="Jasa SEO Bandung - Tingkatkan Visibilitas Website Anda di Google" /> {/* Ganti Surabaya dengan Bandung */}
         <meta
           property="og:description"
-          content="Dapatkan layanan SEO profesional terbaik di Bandung dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google." // Changed Surabaya to Bandung
+          content="Dapatkan layanan SEO profesional terbaik di Bandung dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google." // Ganti Surabaya dengan Bandung
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/logo.png" /> {/* Change with appropriate image URL */}
-        <meta property="og:url" content="https://pasar.web.id/jasa-seo-bandung" /> {/* Changed Surabaya to Bandung */}
-        <link rel="canonical" href="https://pasar.web.id/jasa-seo-bandung" /> {/* Changed Surabaya to Bandung */}
+        <meta property="og:image" content="/images/logo.png" /> {/* Ganti dengan URL gambar yang sesuai */}
+        <meta property="og:url" content="https://pasar.web.id/jasa-seo-bandung" /> {/* Ganti Surabaya dengan Bandung */}
+        <link rel="canonical" href="https://pasar.web.id/jasa-seo-bandung" /> {/* Ganti Surabaya dengan Bandung */}
 
-        {/* Schema.org for Aggregate Rating */}
+        {/* Schema.org untuk Review */}
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Jasa SEO Bandung",
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "112"
-              }
-            }
-          `}
+          {JSON.stringify(reviewSchema)}
         </script>
 
-        {/* Schema.org for Pricing */}
+        {/* Schema.org untuk Pricing (Perbaikan) */}
         <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Jasa SEO Bandung",
-              "offers": {
-                "@type": "Offer",
-                "url": "https://pasar.web.id/jasa-seo-bandung",
-                "priceCurrency": "IDR",
-                "price": "750000"
-              }
-            }
-          `}
+          {JSON.stringify(pricingSchema)}
         </script>
       </Head>
 
