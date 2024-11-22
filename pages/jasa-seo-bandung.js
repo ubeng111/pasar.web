@@ -8,7 +8,6 @@ import ServicesCard from "../components/Bandung/ServicesCard"; // Changed Suraba
 import WhyChooseUs from "../components/Bandung/WhyChooseUs"; // Changed Surabaya to Bandung
 import Testimonials from "../components/Common/Testimonials";
 import AnalysisFormContent from "../components/Bandung/AnalysisFormContent"; // Changed Surabaya to Bandung
-import BlogCardSection from "../components/Common/BlogCardSection";
 import PartnerLogos from "../components/Common/PartnerLogos";
 import FaqSection from "../components/Bandung/FaqSection"; // Changed Surabaya to Bandung
 import PricingContent from "../components/PricingPlans/PricingContent";
@@ -83,7 +82,6 @@ const Index = () => {
       <AnalysisFormContent />
       <PricingContent />
       <Testimonials />
-      <BlogCardSection />
       <FaqSection />
       <div className="pb-100">
         <PartnerLogos />
