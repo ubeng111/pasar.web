@@ -8,7 +8,6 @@ import ServicesCard from "../components/HomeThree/ServicesCard";
 import WhyChooseUs from "../components/HomeThree/WhyChooseUs";
 import Testimonials from "../components/Common/Testimonials";
 import AnalysisFormContent from "../components/HomeThree/AnalysisFormContent";
-import BlogCardSection from "../components/Common/BlogCardSection";
 import PartnerLogos from "../components/Common/PartnerLogos";
 import FaqSection from "../components/HomeThree/FaqSection";
 import PricingContent from "../components/PricingPlans/PricingContent";
@@ -46,7 +45,6 @@ const Index = () => {
       <AnalysisFormContent />
       <PricingContent />
       <Testimonials />
-      <BlogCardSection />
       <FaqSection />
       <div className="pb-100">
         <PartnerLogos />
