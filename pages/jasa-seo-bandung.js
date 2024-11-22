@@ -63,12 +63,39 @@ const Index = () => {
 
         {/* Schema.org for Aggregate Rating */}
         <script type="application/ld+json">
-          {JSON.stringify(aggregateRating)}
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Jasa SEO Bandung",
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "112"
+              },
+              "itemReviewed": {
+                "@type": "Service",
+                "name": "Jasa SEO Bandung"
+              }
+            }
+          `}
         </script>
 
         {/* Schema.org for Pricing */}
         <script type="application/ld+json">
-          {JSON.stringify(pricing)}
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              "name": "Jasa SEO Bandung",
+              "offers": {
+                "@type": "Offer",
+                "url": "https://pasar.web.id/jasa-seo-bandung",
+                "priceCurrency": "IDR",
+                "price": "750000"
+              }
+            }
+          `}
         </script>
       </Head>
 
@@ -91,3 +118,4 @@ const Index = () => {
 };
 
 export default Index;
+
