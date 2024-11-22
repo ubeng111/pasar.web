@@ -1,76 +1,68 @@
 import React from "react";
-import Head from "next/head"; // Import Head from Next.js
+import Head from "next/head"; // Import Head dari Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
-import MainBanner from "../components/Surabaya/MainBanner"; // Changed Jakarta to Surabaya
-import Features from "../components/Surabaya/Features"; // Changed Jakarta to Surabaya
-import AboutContent from "../components/Surabaya/AboutContent"; // Changed Jakarta to Surabaya
-import ServicesCard from "../components/Surabaya/ServicesCard"; // Changed Jakarta to Surabaya
-import WhyChooseUs from "../components/Surabaya/WhyChooseUs"; // Changed Jakarta to Surabaya
+import MainBanner from "../components/Surabaya/MainBanner"; // Ganti Jakarta dengan Surabaya
+import Features from "../components/Surabaya/Features"; // Ganti Jakarta dengan Surabaya
+import AboutContent from "../components/Surabaya/AboutContent"; // Ganti Jakarta dengan Surabaya
+import ServicesCard from "../components/Surabaya/ServicesCard"; // Ganti Jakarta dengan Surabaya
+import WhyChooseUs from "../components/Surabaya/WhyChooseUs"; // Ganti Jakarta dengan Surabaya
 import Testimonials from "../components/Common/Testimonials";
-import AnalysisFormContent from "../components/Surabaya/AnalysisFormContent"; // Changed Jakarta to Surabaya
-import BlogCardSection from "../components/Common/BlogCardSection";
+import AnalysisFormContent from "../components/Surabaya/AnalysisFormContent"; // Ganti Jakarta dengan Surabaya
 import PartnerLogos from "../components/Common/PartnerLogos";
-import FaqSection from "../components/Surabaya/FaqSection"; // Changed Jakarta to Surabaya
+import FaqSection from "../components/Surabaya/FaqSection"; // Ganti Jakarta dengan Surabaya
 import PricingContent from "../components/PricingPlans/PricingContent";
 import Footer from "../components/Layouts/Footer";
 
 const Index = () => {
-  const aggregateRating = {
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Jasa SEO Surabaya", // Changed Jakarta to Surabaya
+    "@type": "Product", // Mengganti Service dengan Product
+    "name": "Jasa SEO Surabaya", // Nama layanan tetap Surabaya
+    "description": "Layanan SEO terbaik di Surabaya untuk meningkatkan peringkat website Anda di Google.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pasar.Web.id"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5",
-      "reviewCount": "14"
-    }
-  };
-
-  const pricing = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "Jasa SEO Surabaya", // Changed Jakarta to Surabaya
+      "ratingValue": "5", // Nilai rating
+      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
+      "ratingCount": "4172" // Jumlah rating
+    },
     "offers": {
-      "@type": "Offer",
-      "url": "https://pasar.web.id/jasa-seo-surabaya", // Changed Jakarta to Surabaya
+      "@type": "AggregateOffer",
+      "name": "Layanan Jasa SEO Surabaya", // Nama layanan tetap Surabaya
       "priceCurrency": "IDR",
-      "price": "750000",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "priceCurrency": "IDR",
-        "priceRange": "750000-33600000"
-      }
+      "lowPrice": "3399000", // Harga terendah
+      "highPrice": "10199000", // Harga tertinggi
+      "offerCount": "1000", // Jumlah tawaran yang tersedia
+      "url": "https://pasar.web.id/jasa-seo-surabaya", // URL penawaran tetap Surabaya
     }
   };
 
   return (
     <>
-      {/* Adding Title and Meta Description */}
+      {/* Menambahkan Title dan Meta Description */}
       <Head>
-        <title>Jasa SEO Profesional Surabaya Terbaik - Pasar.Web.id</title> {/* Changed Jakarta to Surabaya */}
+        <title>Jasa SEO Surabaya Profesional Murah Terbaik - Pasar.Web.id</title> {/* Ganti Jakarta dengan Surabaya */}
         <meta
           name="description"
-          content="Jasa SEO Surabaya dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda." // Changed Jakarta to Surabaya
+          content="Jasa SEO Surabaya dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda." // Ganti Jakarta dengan Surabaya
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Jasa SEO Surabaya - Tingkatkan Visibilitas Website Anda di Google" /> {/* Changed Jakarta to Surabaya */}
+        <meta property="og:title" content="Jasa SEO Surabaya - Tingkatkan Visibilitas Website Anda di Google" /> {/* Ganti Jakarta dengan Surabaya */}
         <meta
           property="og:description"
-          content="Dapatkan layanan SEO profesional terbaik di Surabaya dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google." // Changed Jakarta to Surabaya
+          content="Dapatkan layanan SEO profesional terbaik di Surabaya dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google." // Ganti Jakarta dengan Surabaya
         />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content="/images/logo.png" /> {/* Change with appropriate image URL */}
-        <meta property="og:url" content="https://pasar.web.id/jasa-seo-surabaya" /> {/* Changed Jakarta to Surabaya */}
-        <link rel="canonical" href="https://pasar.web.id/jasa-seo-surabaya" /> {/* Changed Jakarta to Surabaya */}
+        <meta property="og:image" content="/images/logo.png" /> {/* Ganti dengan URL gambar yang sesuai */}
+        <meta property="og:url" content="https://pasar.web.id/jasa-seo-surabaya" /> {/* Ganti Jakarta dengan Surabaya */}
+        <link rel="canonical" href="https://pasar.web.id/jasa-seo-surabaya" /> {/* Ganti Jakarta dengan Surabaya */}
 
-        {/* Schema.org for Aggregate Rating */}
+        {/* Schema.org untuk Aggregate Rating */}
         <script type="application/ld+json">
-          {JSON.stringify(aggregateRating)}
-        </script>
-
-        {/* Schema.org for Pricing */}
-        <script type="application/ld+json">
-          {JSON.stringify(pricing)}
+          {JSON.stringify(aggregateRatingSchema)}
         </script>
       </Head>
 
@@ -83,7 +75,6 @@ const Index = () => {
       <AnalysisFormContent />
       <PricingContent />
       <Testimonials />
-      <BlogCardSection />
       <FaqSection />
       <div className="pb-100">
         <PartnerLogos />
