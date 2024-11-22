@@ -16,9 +16,9 @@ import Footer from "../components/Layouts/Footer";
 const Index = () => {
   const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Product", // Menggunakan Product untuk layanan SEO
+    "@type": "Product", // Mengganti Service dengan Product
     "name": "Jasa SEO Profesional Indonesia", // Nama layanan
-    "description": "Layanan SEO terbaik untuk membantu bisnis Anda mencapai peringkat teratas di Google.",
+    "description": "Layanan SEO terbaik di Indonesia untuk meningkatkan peringkat website Anda di Google.",
     "brand": {
       "@type": "Brand",
       "name": "Pasar.Web.id"
@@ -27,18 +27,16 @@ const Index = () => {
       "@type": "AggregateRating",
       "ratingValue": "5", // Nilai rating
       "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "ratingCount": "8911" // Jumlah rating
+      "ratingCount": "7189" // Jumlah rating
     },
     "offers": {
-      "@type": "Offer",
-      "url": "https://pasar.web.id/jasa-seo", // URL layanan SEO
+      "@type": "AggregateOffer",
+      "name": "Layanan Jasa SEO Profesional Indonesia",
       "priceCurrency": "IDR",
-      "price": "3399000", // Harga layanan
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "priceCurrency": "IDR",
-        "priceRange": "750000-10199000" // Rentang harga layanan
-      }
+      "lowPrice": "750000", // Harga terendah
+      "highPrice": "33600000", // Harga tertinggi
+      "offerCount": "1000", // Jumlah tawaran yang tersedia
+      "url": "https://pasar.web.id", // URL penawaran
     }
   };
 
@@ -47,16 +45,16 @@ const Index = () => {
       {/* Menambahkan Title dan Meta Description */}
       <Head>
         <meta name="google-site-verification" content="YZ0Oul8XC-Linh3djeSvZODJEnEA5_8g68V8SKnLvdI" />
-        <title>Jasa SEO Profesional Terbaik di Indonesia</title>
+        <title>Jasa SEO Profesional Terbaik di Indonesia - Pasar.Web.id</title>
         <meta
           name="description"
-          content="Kami menyediakan jasa SEO profesional untuk membantu bisnis Anda mencapai peringkat teratas di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda."
+          content="Layanan SEO terbaik di Indonesia untuk meningkatkan peringkat website Anda di Google. Solusi optimal untuk bisnis Anda."
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Jasa SEO Profesional - Meningkatkan Visibilitas Website Anda" />
+        <meta property="og:title" content="Jasa SEO Profesional - Meningkatkan Peringkat Website Anda" />
         <meta
           property="og:description"
-          content="Dapatkan layanan SEO terbaik untuk bisnis Anda. Meningkatkan peringkat website Anda dan menarik pelanggan lebih banyak melalui teknik SEO terbaru dan terpercaya."
+          content="Dapatkan layanan SEO terbaik di Indonesia. Tingkatkan peringkat website Anda di Google dengan teknik SEO terbaru."
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/logo.png" /> {/* Ganti dengan URL gambar yang sesuai */}
