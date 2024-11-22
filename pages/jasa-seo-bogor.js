@@ -1,72 +1,69 @@
 import React from "react";
 import Head from "next/head"; // Import Head from Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
-import MainBanner from "../components/Bogor/MainBanner";
-import Features from "../components/Bogor/Features";
-import AboutContent from "../components/Bogor/AboutContent";
-import ServicesCard from "../components/Bogor/ServicesCard";
-import WhyChooseUs from "../components/Bogor/WhyChooseUs";
+import MainBanner from "../components/Bogor/MainBanner"; // Ganti Bandung dengan Bogor
+import Features from "../components/Bogor/Features"; // Ganti Bandung dengan Bogor
+import AboutContent from "../components/Bogor/AboutContent"; // Ganti Bandung dengan Bogor
+import ServicesCard from "../components/Bogor/ServicesCard"; // Ganti Bandung dengan Bogor
+import WhyChooseUs from "../components/Bogor/WhyChooseUs"; // Ganti Bandung dengan Bogor
 import Testimonials from "../components/Common/Testimonials";
-import AnalysisFormContent from "../components/Bogor/AnalysisFormContent";
-import BlogCardSection from "../components/Common/BlogCardSection";
+import AnalysisFormContent from "../components/Bogor/AnalysisFormContent"; // Ganti Bandung dengan Bogor
 import PartnerLogos from "../components/Common/PartnerLogos";
-import FaqSection from "../components/Bogor/FaqSection";
+import FaqSection from "../components/Bogor/FaqSection"; // Ganti Bandung dengan Bogor
 import PricingContent from "../components/PricingPlans/PricingContent";
 import Footer from "../components/Layouts/Footer";
 
 const Index = () => {
+  const aggregateRatingSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product", // Mengganti Service dengan Product
+    "name": "Jasa SEO Bogor", // Nama layanan
+    "description": "Layanan SEO terbaik di Bogor untuk meningkatkan peringkat website Anda di Google.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Pasar.Web.id"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5", // Nilai rating
+      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
+      "ratingCount": "2566" // Jumlah rating
+    },
+    "offers": {
+      "@type": "AggregateOffer",
+      "name": "Layanan Jasa SEO Bogor",
+      "priceCurrency": "IDR",
+      "lowPrice": "750000", // Harga terendah
+      "highPrice": "33600000", // Harga tertinggi
+      "offerCount": "1000", // Jumlah tawaran yang tersedia
+      "url": "https://pasar.web.id/jasa-seo-bogor", // URL penawaran
+    }
+  };
+
   return (
     <>
       {/* Menambahkan Title dan Meta Description */}
       <Head>
-        <title>Jasa SEO Bogor Terbaik - Pasar.Web.id</title>
+        <title>Jasa SEO Bogor Profesional Murah Terbaik - Pasar.Web.id</title> {/* Ganti Bandung dengan Bogor */}
         <meta
           name="description"
-          content="Jasa SEO Bogor dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda."
+          content="Jasa SEO Bogor dari Pasar.Web.id untuk membantu bisnis Anda mencapai peringkat tertinggi di mesin pencari Google. Meningkatkan visibilitas, trafik, dan penjualan online Anda." // Ganti Bandung dengan Bogor
         />
         <meta name="robots" content="index, follow" />
-        <meta property="og:title" content="Jasa SEO Bogor - Tingkatkan Visibilitas Website Anda di Google" />
+        <meta property="og:title" content="Jasa SEO Bogor - Tingkatkan Visibilitas Website Anda di Google" /> {/* Ganti Bandung dengan Bogor */}
         <meta
           property="og:description"
-          content="Dapatkan layanan SEO profesional terbaik di Bogor dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google."
+          content="Dapatkan layanan SEO profesional terbaik di Bogor dari Pasar.Web.id. Gunakan teknik SEO terbaru untuk membawa website Anda ke peringkat teratas di Google." // Ganti Bandung dengan Bogor
         />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/images/logo.png" /> {/* Ganti dengan URL gambar yang sesuai */}
-        <meta property="og:url" content="https://pasar.web.id/jasa-seo-bogor" /> {/* Ganti dengan URL website Anda */}
-        <link rel="canonical" href="https://pasar.web.id/jasa-seo-bogor" /> {/* Ganti dengan URL halaman Anda */}
+        <meta property="og:url" content="https://pasar.web.id/jasa-seo-bogor" /> {/* Ganti Bandung dengan Bogor */}
+        <link rel="canonical" href="https://pasar.web.id/jasa-seo-bogor" /> {/* Ganti Bandung dengan Bogor */}
 
-        {/* Structured Data for Aggregate Rating */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Service",
-              "name": "Jasa SEO Bogor",
-              "provider": {
-                "@type": "Organization",
-                "name": "Pasar.Web.id",
-                "url": "https://pasar.web.id",
-                "logo": "https://pasar.web.id/images/logo.png" // Adjust this to your logo URL
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5",
-                "reviewCount": "86"
-              },
-              "priceRange": "Rp750.000 - Rp2.800.000",
-              "url": "https://pasar.web.id/jasa-seo-bogor",
-              "description": "Layanan SEO terbaik di Bogor untuk membantu bisnis Anda berkembang dan mendapatkan peringkat terbaik di Google.",
-              "offers": {
-                "@type": "Offer",
-                "priceCurrency": "IDR",
-                "price": "750000", // Price as an example
-                "priceValidUntil": "2024-12-31",
-                "url": "https://pasar.web.id/jasa-seo-bogor"
-              }
-            }),
-          }}
-        />
+        {/* Schema.org untuk Aggregate Rating */}
+        <script type="application/ld+json">
+          {JSON.stringify(aggregateRatingSchema)}
+        </script>
       </Head>
 
       <NavbarTwo />
@@ -78,7 +75,6 @@ const Index = () => {
       <AnalysisFormContent />
       <PricingContent />
       <Testimonials />
-      <BlogCardSection />
       <FaqSection />
       <div className="pb-100">
         <PartnerLogos />
