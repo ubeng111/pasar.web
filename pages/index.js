@@ -19,6 +19,7 @@ const Index = () => {
     <>
       {/* Menambahkan Title dan Meta Description */}
       <Head>
+    <meta name="google-site-verification" content="YZ0Oul8XC-Linh3djeSvZODJEnEA5_8g68V8SKnLvdI" />
         <title>Jasa SEO Profesional Terbaik di Indonesia</title>
         <meta
           name="description"
