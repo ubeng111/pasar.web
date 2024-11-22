@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head"; // Import Head from Next.js
+import Head from "next/head"; // Import Head dari Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
 import MainBanner from "../components/Bali/MainBanner"; // Ganti Surabaya dengan Bali
 import Features from "../components/Bali/Features"; // Ganti Surabaya dengan Bali
@@ -26,18 +26,18 @@ const Index = () => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5", // Nilai rating
-      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "ratingCount": "4172" // Jumlah rating
+      "ratingValue": 5, // Nilai rating (angka, bukan string)
+      "bestRating": 5,  // Nilai rating terbaik (angka, bukan string)
+      "ratingCount": 4172 // Jumlah rating (angka, bukan string)
     },
     "offers": {
       "@type": "AggregateOffer",
       "name": "Layanan Jasa SEO Bali",
       "priceCurrency": "IDR",
-      "lowPrice": "750000", // Harga terendah
-      "highPrice": "33600000", // Harga tertinggi
-      "offerCount": "1000", // Jumlah tawaran yang tersedia
-      "url": "https://pasar.web.id/jasa-seo-bali", // URL penawaran
+      "lowPrice": 750000, // Harga terendah (angka, bukan string)
+      "highPrice": 33600000, // Harga tertinggi (angka, bukan string)
+      "offerCount": 1000, // Jumlah tawaran yang tersedia (angka, bukan string)
+      "url": "https://pasar.web.id/jasa-seo-bali" // URL penawaran
     }
   };
 
@@ -60,12 +60,15 @@ const Index = () => {
         <meta property="og:image" content="/images/logo.png" /> {/* Ganti dengan URL gambar yang sesuai */}
         <meta property="og:url" content="https://pasar.web.id/jasa-seo-bali" /> {/* Ganti Surabaya dengan Bali */}
         <link rel="canonical" href="https://pasar.web.id/jasa-seo-bali" /> {/* Ganti Surabaya dengan Bali */}
-
-        {/* Schema.org untuk Aggregate Rating */}
-        <script type="application/ld+json">
-          {JSON.stringify(aggregateRatingSchema)}
-        </script>
       </Head>
+
+      {/* Schema.org untuk Aggregate Rating menggunakan dangerouslySetInnerHTML */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aggregateRatingSchema),
+        }}
+      />
 
       <NavbarTwo />
       <MainBanner />
