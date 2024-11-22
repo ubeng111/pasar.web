@@ -14,24 +14,21 @@ import PricingContent from "../components/PricingPlans/PricingContent";
 import Footer from "../components/Layouts/Footer";
 
 const Index = () => {
-  const reviewSchema = {
+  const aggregateRatingSchema = {
     "@context": "https://schema.org",
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
+    "@type": "Service",
+    "name": "Jasa SEO Bandung", // Nama layanan
+    "aggregateRating": {
+      "@type": "AggregateRating",
       "ratingValue": "5", // Nilai rating
-      "bestRating": "5",  // Nilai rating terbaik (misalnya 5 untuk bintang 5)
-      "worstRating": "1"  // Nilai rating terendah (misalnya 1 untuk bintang 1)
+      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
+      "reviewCount": "112" // Jumlah review
     },
-    "author": {
-      "@type": "Person",
-      "name": "Pelanggan Kami" // Nama pengulas, ini bisa disesuaikan
-    },
-    "datePublished": "2024-11-22", // Tanggal ulasan dipublikasikan
-    "itemReviewed": {
-      "@type": "Service",
-      "name": "Jasa SEO Bandung", // Nama layanan
-      "description": "Layanan SEO profesional di Bandung untuk membantu bisnis Anda menduduki peringkat tertinggi di Google."
+    "offers": {
+      "@type": "Offer",
+      "url": "https://pasar.web.id/jasa-seo-bandung", // URL penawaran
+      "priceCurrency": "IDR",
+      "price": "750000"
     }
   };
 
@@ -75,9 +72,9 @@ const Index = () => {
         <meta property="og:url" content="https://pasar.web.id/jasa-seo-bandung" /> {/* Ganti Surabaya dengan Bandung */}
         <link rel="canonical" href="https://pasar.web.id/jasa-seo-bandung" /> {/* Ganti Surabaya dengan Bandung */}
 
-        {/* Schema.org untuk Review */}
+        {/* Schema.org untuk Aggregate Rating */}
         <script type="application/ld+json">
-          {JSON.stringify(reviewSchema)}
+          {JSON.stringify(aggregateRatingSchema)}
         </script>
 
         {/* Schema.org untuk Pricing (Perbaikan) */}
@@ -105,3 +102,4 @@ const Index = () => {
 };
 
 export default Index;
+
