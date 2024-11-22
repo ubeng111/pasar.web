@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 
 const Features = () => {
   return (
@@ -13,7 +12,7 @@ const Features = () => {
                   <i className="flaticon-seo"></i>
                 </div>
                 <h3>
-                  <Link href="/single-service">Jasa SEO Profesional</Link>
+                  Jasa SEO Profesional
                 </h3>
                 <p>
                   Kami menyediakan layanan jasa SEO profesional, dengan pakar SEO yang berpengalaman untuk meningkatkan
@@ -29,7 +28,7 @@ const Features = () => {
                   <i className="flaticon-analytics"></i>
                 </div>
                 <h3>
-                  <Link href="/single-service">Analisis Kompetitor SEO</Link>
+                  Analisis Kompetitor SEO
                 </h3>
                 <p>
                   Dengan analisis kompetitor SEO yang mendalam, kami membantu Anda memahami posisi pasar dan
@@ -45,7 +44,7 @@ const Features = () => {
                   <i className="flaticon-laptop"></i>
                 </div>
                 <h3>
-                  <Link href="/single-service">Pemasaran Media Sosial untuk SEO</Link>
+                  Pemasaran Media Sosial untuk SEO
                 </h3>
                 <p>
                   Kami juga menawarkan layanan jasa SEO untuk pemasaran media sosial. Meningkatkan visibilitas di media sosial adalah langkah penting
