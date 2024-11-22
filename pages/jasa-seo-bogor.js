@@ -1,5 +1,5 @@
 import React from "react";
-import Head from "next/head"; // Import Head from Next.js
+import Head from "next/head"; // Import Head dari Next.js
 import NavbarTwo from "../components/Layouts/NavbarTwo";
 import MainBanner from "../components/Bogor/MainBanner"; // Ganti Bandung dengan Bogor
 import Features from "../components/Bogor/Features"; // Ganti Bandung dengan Bogor
@@ -25,18 +25,18 @@ const Index = () => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5", // Nilai rating
-      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "ratingCount": "2566" // Jumlah rating
+      "ratingValue": 5, // Nilai rating (angka, bukan string)
+      "bestRating": 5,  // Nilai rating terbaik (misalnya 5)
+      "ratingCount": 2566 // Jumlah rating (angka, bukan string)
     },
     "offers": {
       "@type": "AggregateOffer",
       "name": "Layanan Jasa SEO Bogor",
       "priceCurrency": "IDR",
-      "lowPrice": "750000", // Harga terendah
-      "highPrice": "33600000", // Harga tertinggi
-      "offerCount": "1000", // Jumlah tawaran yang tersedia
-      "url": "https://pasar.web.id/jasa-seo-bogor", // URL penawaran
+      "lowPrice": 750000, // Harga terendah (angka, bukan string)
+      "highPrice": 33600000, // Harga tertinggi (angka, bukan string)
+      "offerCount": 1000, // Jumlah tawaran yang tersedia (angka, bukan string)
+      "url": "https://pasar.web.id/jasa-seo-bogor" // URL penawaran
     }
   };
 
@@ -61,9 +61,12 @@ const Index = () => {
         <link rel="canonical" href="https://pasar.web.id/jasa-seo-bogor" /> {/* Ganti Bandung dengan Bogor */}
 
         {/* Schema.org untuk Aggregate Rating */}
-        <script type="application/ld+json">
-          {JSON.stringify(aggregateRatingSchema)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
+          }}
+        />
       </Head>
 
       <NavbarTwo />
