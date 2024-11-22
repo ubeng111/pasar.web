@@ -25,18 +25,18 @@ const Index = () => {
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5", // Nilai rating
-      "bestRating": "5",  // Nilai rating terbaik (misalnya 5)
-      "ratingCount": "4172" // Jumlah rating
+      "ratingValue": 5, // Nilai rating sebagai angka bukan string
+      "bestRating": 5,  // Nilai rating terbaik (misalnya 5)
+      "ratingCount": 4172 // Jumlah rating, angka bukan string
     },
     "offers": {
       "@type": "AggregateOffer",
       "name": "Layanan Jasa SEO Surabaya", // Nama layanan tetap Surabaya
       "priceCurrency": "IDR",
-      "lowPrice": "3399000", // Harga terendah
-      "highPrice": "10199000", // Harga tertinggi
-      "offerCount": "1000", // Jumlah tawaran yang tersedia
-      "url": "https://pasar.web.id/jasa-seo-surabaya", // URL penawaran tetap Surabaya
+      "lowPrice": 3399000, // Harga terendah, angka bukan string
+      "highPrice": 10199000, // Harga tertinggi, angka bukan string
+      "offerCount": 1000, // Jumlah tawaran yang tersedia, angka bukan string
+      "url": "https://pasar.web.id/jasa-seo-surabaya" // URL penawaran tetap Surabaya
     }
   };
 
@@ -61,9 +61,12 @@ const Index = () => {
         <link rel="canonical" href="https://pasar.web.id/jasa-seo-surabaya" /> {/* Ganti Jakarta dengan Surabaya */}
 
         {/* Schema.org untuk Aggregate Rating */}
-        <script type="application/ld+json">
-          {JSON.stringify(aggregateRatingSchema)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(aggregateRatingSchema),
+          }}
+        />
       </Head>
 
       <NavbarTwo />
