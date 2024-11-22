@@ -36,7 +36,7 @@ const Index = () => {
       "lowPrice": "750000", // Harga terendah
       "highPrice": "33600000", // Harga tertinggi
       "offerCount": "1000", // Jumlah tawaran yang tersedia
-      "url": "https://pasar.web.id/jasa-seo-jakarta", // URL penawaran tetap Jakarta
+      "url": "https://pasar.web.id/jasa-seo-jakarta" // Koma terakhir dihapus
     }
   };
 
