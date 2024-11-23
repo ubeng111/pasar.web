@@ -71,14 +71,15 @@ const ServicesContent = () => {
               </div>
             </div>
 
+            {/* Replaced "Pemulihan dari Penalti" with "Jasa Pembuatan Website" */}
             <div className="col-lg-4 col-md-6 col-sm-6">
               <div className="single-services-box">
                 <div className="icon bg-f8fbd5">
-                  <i className="flaticon-data-recovery"></i>
+                  <i className="flaticon-web-design"></i> {/* Update icon class if necessary */}
                 </div>
-                <h3>Pemulihan dari Penalti</h3>
+                <h3>Jasa Pembuatan Website</h3>
                 <p>
-                  Kami membantu Anda untuk mengatasi penalti dari mesin pencari dan memulihkan peringkat website Anda dengan teknik SEO yang tepat.
+                  Kami menawarkan layanan pembuatan website profesional yang disesuaikan dengan kebutuhan bisnis Anda. Dapatkan website yang responsif, user-friendly, dan mudah dikelola.
                 </p>
               </div>
             </div>
